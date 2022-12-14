@@ -28,10 +28,20 @@ public class SerializerTest
             new DummyData { Id = 2, Name = "Anna", Ignore = "bar" },
         };
 
-        var newline = Environment.NewLine;
+        var lineType1 = Environment.NewLine;
         Assert.Equal(
-            $"Id,UserName{newline}1,Jone{newline}2,Anna{newline}",
-            Serializer.SerializeCsv(list)
+            Serializer.SerializeCsv(list),
+            $"Id,UserName{lineType1}1,Jone{lineType1}2,Anna{lineType1}"
+       );
+        Assert.Equal(
+           Serializer.SerializeCsv(typeof(DummyData), list),
+           $"Id,UserName{lineType1}1,Jone{lineType1}2,Anna{lineType1}"
+      );
+
+        var lineType2 = "\n";
+        Assert.Equal(
+            Serializer.SerializeCsv(list, lineType2),
+            $"Id,UserName{lineType2}1,Jone{lineType2}2,Anna{lineType2}"
        );
     }
 }
