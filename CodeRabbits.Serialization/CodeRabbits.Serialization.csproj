@@ -4,7 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <VersionPrefix>0.0.1</VersionPrefix>
+        <VersionPrefix>0.0.2</VersionPrefix>
         <Authors>CodeRabbits</Authors>
         <RepositoryUrl>https://github.com/code-rabbits-team/CodeRabbits.Serialization</RepositoryUrl>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
