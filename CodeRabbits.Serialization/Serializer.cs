@@ -16,7 +16,6 @@ public static class Serializer
         return SerializeCsv(typeof(T), datas, Environment.NewLine);
     }
 
-
     public static string SerializeCsv<T>(IEnumerable<T> datas, string newLine)
     {
         return SerializeCsv(typeof(T), datas, newLine);
